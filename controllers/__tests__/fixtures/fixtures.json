@@ -1,0 +1,100 @@
+{
+    "responses" : {
+        "validationError" : {
+            "status": "error",
+            "error": "Validation Failed, can't insert movie."
+        },
+        "getMovieListSuccess" : {
+                "status": "success",
+                "result": {
+                    "Items": [
+                        {
+                            "releaseDate": "12/12/1999",
+                            "updatedAt": 1531662183100,
+                            "studio": "studio3",
+                            "id": "fee68fc0-8834-11e8-8beb-d5b6f3ed16e1",
+                            "genre": "action",
+                            "submittedAt": 1531662183100,
+                            "title": "The Terminator"
+                        }
+                    ],
+                    "Count": 1,
+                    "ScannedCount": 1
+                }
+        },
+        "getMovieByIdSuccess" : {            
+            "status": "success",
+            "result": {
+                "Item": {
+                    "director": "director1",
+                    "releaseDate": "12/12/1999",
+                    "updatedAt": 1531460825387,
+                    "studio": "studio3",
+                    "id": "2c5a06c0-8660-11e8-add4-65f41bd10619",
+                    "genre": "action",
+                    "submittedAt": 1531460825387,
+                    "title": "title1"
+                }
+            }            
+        },
+        "duplicateTitle":{
+            "status": "error",
+            "error": "Error: movie already has this title - title1"
+        },
+        "movieInsertedSuccess":{            
+            "status": "success",
+            "result": {
+                "title": "title10",
+                "studio": "studio10",
+                "releaseDate": "12/12/1999",
+                "director": "director10",
+                "genre": "action"
+            }            
+        }
+    },
+    "requests" : {
+        "missingTitle" : {
+            "req" : {
+                "body": {
+                    "studio": "studio3", 
+                    "releaseDate":"12/12/1999",
+                    "director" : "director3",
+                    "genre" : "action" 
+                }
+            }           
+        },
+        "emptyTitle" : {
+            "req" : {
+                "body": {
+                    "title": "",
+                    "studio": "studio3", 
+                    "releaseDate":"12/12/1999",
+                    "director" : "director3",
+                    "genre" : "action" 
+                }
+            }           
+        },
+        "numericTitle" : {
+            "req" : {
+                "body": {
+                    "title": 123456,
+                    "studio": "studio3", 
+                    "releaseDate":"12/12/1999",
+                    "director" : "director3",
+                    "genre" : "action" 
+                }
+            }           
+        },
+        "correctRequest" : {
+            "req" : {
+                "body": {
+                    "title": "title1",
+                    "studio": "studio1", 
+                    "releaseDate":"12/12/1999",
+                    "director" : "director1",
+                    "genre" : "action" 
+                }
+            }           
+        }
+    }  
+}

@@ -1,0 +1,9 @@
+.DS_Store
+*.log
+*.pem
+*.rsa
+node_modules
+readme.txt
+config/config.json
+*/public
+.env

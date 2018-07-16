@@ -1,0 +1,30 @@
+{
+  "name": "movie-service",
+  "version": "0.0.1",
+  "author": "Billy Cheng <bcillion@hotmail.com>",
+  "private": true,
+  "scripts": {
+    "start": "node movie-service.js",
+    "jest": "./node_modules/jest/bin/jest.js",
+    "debug": "node-debug movie-service.js --debug-brk",
+    "docker": "node scripts/docker.js"
+  },
+  "engines": {
+    "node": ">=6.2.1"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.273.1",
+    "dotenv": "^6.0.0",
+    "fwsp-config": "1.1.5",
+    "fwsp-server-response": "2.2.6",
+    "hydra-express": "1.6.9",
+    "ramda": "^0.25.0",
+    "uuid": "^3.3.2",
+    "winston": "^2.0.0",
+    "winston-aws-cloudwatch": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "3.16.0",
+    "jest": "^23.4.0"
+  }
+}

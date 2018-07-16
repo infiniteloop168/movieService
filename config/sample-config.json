@@ -1,0 +1,10 @@
+{
+  "environment": "development",
+  "hydra": {
+    "serviceName": "movie-service",
+    "serviceIP": "",
+    "servicePort": 8080,
+    "serviceType": "movie",
+    "serviceDescription": ""
+  }
+}

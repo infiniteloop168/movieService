@@ -1,0 +1,40 @@
+{
+    "Resources": {
+      "MovieListDDBTable": {
+        "Type": "AWS::DynamoDB::Table",
+        "Properties": {
+          "AttributeDefinitions": [
+            {
+              "AttributeName": "id",
+              "AttributeType": "S"
+            }
+          ],
+          "KeySchema": [
+            {
+              "AttributeName": "id",
+              "KeyType": "HASH"
+            }
+          ],
+          "TableName":"movie-list2" 
+        }
+      },
+      "MovieTitleListDDBTable": {
+        "Type": "AWS::DynamoDB::Table",
+        "Properties": {
+          "AttributeDefinitions": [
+            {
+              "AttributeName": "title",
+              "AttributeType": "S"
+            }
+          ],
+          "KeySchema": [
+            {
+              "AttributeName": "title",
+              "KeyType": "HASH"
+            }
+          ],
+          "TableName":"movie-title-list2" 
+        }
+      }
+    }
+  }
